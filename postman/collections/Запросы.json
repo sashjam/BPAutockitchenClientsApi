@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "877ccf0b-7c52-4ba3-8103-ac481e81dfd7",
+		"name": "Запросы",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "9695358-877ccf0b-7c52-4ba3-8103-ac481e81dfd7"
+	},
+	"item": [
+		{
+			"name": "Отправка",
+			"item": [],
+			"id": "c4044a58-d244-4dfb-8694-c9ed95e3e8a5"
+		},
+		{
+			"name": "Authorization",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "740b86bf-660c-45b7-942c-6509f71de8a2",
+						"exec": [
+							"if(pm.response.code === 200){\r",
+							"    const responseJson = pm.response.json();\r",
+							"    console.log(responseJson);\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "e2dd40f5-09fa-4929-a302-025ad2337062",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "{{user_email}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{user_password}}",
+							"type": "text"
+						},
+						{
+							"key": "domain",
+							"value": "https://localhost:80",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Entrypoint}}token",
+					"host": [
+						"{{Entrypoint}}token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "ntlm",
+		"ntlm": [
+			{
+				"key": "password",
+				"value": "{{user_password}}",
+				"type": "string"
+			},
+			{
+				"key": "disableRetryRequest",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "domain",
+				"value": "{{Entrypoint}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user_email}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d05a4e2a-5b98-40d1-b62d-812bba37b200",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"function logger (data) {\r",
+					"    console.log(`Logging information to the console, ${data}`)\r",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "40addc0a-3919-4f5a-be8f-cd8616f65015",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

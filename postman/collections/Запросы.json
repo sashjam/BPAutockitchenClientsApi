@@ -7,114 +7,125 @@
 	},
 	"item": [
 		{
-			"name": "Отправка",
-			"item": [],
-			"id": "c4044a58-d244-4dfb-8694-c9ed95e3e8a5"
-		},
-		{
-			"name": "Authorization",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "740b86bf-660c-45b7-942c-6509f71de8a2",
-						"exec": [
-							"if(pm.response.code === 200){\r",
-							"    const responseJson = pm.response.json();\r",
-							"    console.log(responseJson);\r",
-							"}"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"id": "e2dd40f5-09fa-4929-a302-025ad2337062",
+			"name": "Отправка данных",
+			"id": "414cfc51-62d9-4bd2-bee1-0522ec69ed9c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "username",
-							"value": "{{user_email}}",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "{{user_password}}",
-							"type": "text"
-						},
-						{
-							"key": "domain",
-							"value": "https://localhost:80",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
-					"raw": "{{Entrypoint}}token",
+					"raw": "{{Entrypoint}}store",
 					"host": [
-						"{{Entrypoint}}token"
+						"{{Entrypoint}}store"
 					]
 				}
 			},
 			"response": []
 		}
 	],
-	"auth": {
-		"type": "ntlm",
-		"ntlm": [
-			{
-				"key": "password",
-				"value": "{{user_password}}",
-				"type": "string"
-			},
-			{
-				"key": "disableRetryRequest",
-				"value": true,
-				"type": "boolean"
-			},
-			{
-				"key": "domain",
-				"value": "{{Entrypoint}}",
-				"type": "string"
-			},
-			{
-				"key": "username",
-				"value": "{{user_email}}",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "d05a4e2a-5b98-40d1-b62d-812bba37b200",
+				"id": "c629e2db-05cc-4884-8ad1-bae2e8b69b5a",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
-					"function logger (data) {\r",
-					"    console.log(`Logging information to the console, ${data}`)\r",
-					"}"
+					"\r",
+					"const auth = async () => {\r",
+					"\r",
+					"    //Данные запроса\r",
+					"    const entrypoint  = pm.collectionVariables.get(\"Entrypoint\");\r",
+					"    if(!entrypoint) throw new Error(\"`Entrypoint` variable empty\");\r",
+					"    \r",
+					"    const username = pm.collectionVariables.get(\"username\");\r",
+					"    if(!username) throw new Error(\"`username` variable empty\");\r",
+					"\r",
+					"    const password = pm.collectionVariables.get(\"password\");\r",
+					"     if(!password) throw new Error(\"`password` variable empty\");\r",
+					"\r",
+					"    \r",
+					"    //Опции запроса\r",
+					"    const authOptions = {\r",
+					"        url:  entrypoint + 'token',\r",
+					"        method: 'POST',\r",
+					"        body: {\r",
+					"            mode: 'urlencoded',\r",
+					"            urlencoded: [\r",
+					"                { key: \"username\", value: username },\r",
+					"                { key: \"password\", value: password },\r",
+					"                { key: \"domain\",  value:'localhost:80' }\r",
+					"            ]\r",
+					"        }\r",
+					"    };\r",
+					"\r",
+					"\r",
+					"    //Отсылаем и обрабатываем запрос\r",
+					"    pm.sendRequest(authOptions, \r",
+					"        (err, res) => {\r",
+					"        //console.log(res.text());\r",
+					"        if (err === null) {\r",
+					"            const jsonRes = res.json();\r",
+					"            if(jsonRes.type === 'success' && jsonRes.token){\r",
+					"                console.log('Token success!!!');\r",
+					"                pm.collectionVariables.set(\"token\",jsonRes.token);\r",
+					"            }else{\r",
+					"                console.log(jsonRes);\r",
+					"                throw new Error(\"Сервер не предоставил токен\");\r",
+					"                \r",
+					"            }\r",
+					"            return true;\r",
+					"        }\r",
+					"\r",
+					"        console.log(res,err);\r",
+					"        throw new Error(\"Не удалось авторизоваться\");\r",
+					"    });\r",
+					"\r",
+					"};\r",
+					"\r",
+					"await auth();\r",
+					"   "
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "40addc0a-3919-4f5a-be8f-cd8616f65015",
+				"id": "d95d636b-97a1-41e1-b3a3-86fd22a12f5c",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "bb081701-e5c0-4a99-b36e-3074c88fbf74",
+			"key": "Entrypoint",
+			"value": "localhost:8890/api/public/auto-kitchen/",
+			"type": "string"
+		},
+		{
+			"id": "496882ca-778f-421a-a65d-02b8eef3a6eb",
+			"key": "username",
+			"value": "sashjambox@yandex.ru",
+			"type": "string"
+		},
+		{
+			"id": "dbcc89a2-df51-453e-ba59-0c2c79678b88",
+			"key": "password",
+			"value": "sashjambox@yandex.ru",
+			"type": "string"
+		},
+		{
+			"id": "7186aecc-634c-4f06-af15-ce8dd3e4ac49",
+			"key": "token",
+			"value": "",
+			"type": "string"
 		}
 	]
 }

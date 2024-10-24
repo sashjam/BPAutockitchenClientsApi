@@ -104,25 +104,25 @@
 	],
 	"variable": [
 		{
-			"id": "bb081701-e5c0-4a99-b36e-3074c88fbf74",
+			"id": "dc03f719-adf7-4de7-94ed-3d89e01b2376",
 			"key": "Entrypoint",
 			"value": "localhost:8890/api/public/auto-kitchen/",
 			"type": "string"
 		},
 		{
-			"id": "496882ca-778f-421a-a65d-02b8eef3a6eb",
+			"id": "a90422ba-f2b9-403e-ab72-c9f6bae303b6",
 			"key": "username",
 			"value": "sashjambox@yandex.ru",
 			"type": "string"
 		},
 		{
-			"id": "dbcc89a2-df51-453e-ba59-0c2c79678b88",
+			"id": "38092f37-b596-4f29-95dd-c80a2a75cf4a",
 			"key": "password",
 			"value": "sashjambox@yandex.ru",
 			"type": "string"
 		},
 		{
-			"id": "7186aecc-634c-4f06-af15-ce8dd3e4ac49",
+			"id": "c6e6c314-b654-4ba2-990c-f8cee8dd813d",
 			"key": "token",
 			"value": "",
 			"type": "string"

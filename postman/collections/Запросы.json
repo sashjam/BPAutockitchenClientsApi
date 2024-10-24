@@ -23,13 +23,31 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Отправка данных Copy",
+			"id": "c44d7139-fefd-40cc-a80c-a7f406d2802a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Entrypoint}}store",
+					"host": [
+						"{{Entrypoint}}store"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c629e2db-05cc-4884-8ad1-bae2e8b69b5a",
+				"id": "aff3da1c-8180-4bb5-a6c5-d703ab0d3a5c",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -93,7 +111,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "d95d636b-97a1-41e1-b3a3-86fd22a12f5c",
+				"id": "6cfa61e9-d34f-419d-989d-aad2fa9074c6",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -104,25 +122,25 @@
 	],
 	"variable": [
 		{
-			"id": "dc03f719-adf7-4de7-94ed-3d89e01b2376",
+			"id": "bf6d66ec-cb4a-4080-b84b-8ce6803d70cf",
 			"key": "Entrypoint",
-			"value": "localhost:8890/api/public/auto-kitchen/",
+			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "a90422ba-f2b9-403e-ab72-c9f6bae303b6",
+			"id": "c182812c-bff8-4cac-b294-bd8c1c5be751",
 			"key": "username",
-			"value": "sashjambox@yandex.ru",
+			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "38092f37-b596-4f29-95dd-c80a2a75cf4a",
+			"id": "ec2577df-f354-4efd-b1f6-7227bb562a72",
 			"key": "password",
-			"value": "sashjambox@yandex.ru",
+			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "c6e6c314-b654-4ba2-990c-f8cee8dd813d",
+			"id": "aa903719-303d-4953-b6b7-915c99a9a244",
 			"key": "token",
 			"value": "",
 			"type": "string"

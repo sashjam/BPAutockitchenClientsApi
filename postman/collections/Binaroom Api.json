@@ -1,0 +1,763 @@
+{
+	"info": {
+		"_postman_id": "8407a556-e72a-48d5-b229-ecf9f5968584",
+		"name": "Binaroom Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "9695358-8407a556-e72a-48d5-b229-ecf9f5968584"
+	},
+	"item": [
+		{
+			"name": "Users Scope",
+			"item": [
+				{
+					"name": "list",
+					"id": "4e0bf147-bad5-4b37-ad7d-6a37b5ff2301",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "users",
+									"type": "text",
+									"description": "required"
+								},
+								{
+									"key": "method",
+									"value": "list",
+									"type": "text",
+									"description": "required"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"id": "d72d1a98-625e-470c-82b2-60ae6193e663",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "users",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "detail",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "fbd5cd0d-2fb2-4d53-9022-2dadd9890f68",
+			"description": "Набор методов для работы с пользователями"
+		},
+		{
+			"name": "Projects Scope",
+			"item": [
+				{
+					"name": "list",
+					"id": "1d98ae27-d6d0-4e3e-b398-89b7208aee2a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "projects",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "list",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"id": "4d366118-ec35-4c67-a8bf-0343a8dbe004",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "projects",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "add",
+									"type": "text"
+								},
+								{
+									"key": "conversation_id",
+									"value": "236874",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estimate",
+					"id": "264c25d3-aae4-4d04-bac2-216c32d96ecc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "projects",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "estimate",
+									"type": "text"
+								},
+								{
+									"key": "project_id",
+									"value": "236875",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9b9b6b6b-9a61-477a-8983-07cb7b7fdb58",
+			"description": "Набор методов для работы с проектами"
+		},
+		{
+			"name": "Converations Scope",
+			"item": [
+				{
+					"name": "list",
+					"id": "9857b030-6b75-48b0-b40f-9acdfb534819",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "conversations",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "list",
+									"type": "text"
+								},
+								{
+									"key": "owner_id",
+									"value": "1370",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"id": "6b50b66a-1a67-48fd-a2bd-298705b127ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "conversations",
+									"type": "text",
+									"description": "Required"
+								},
+								{
+									"key": "method",
+									"value": "add",
+									"type": "text",
+									"description": "Required"
+								},
+								{
+									"key": "creator",
+									"value": "1370",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "client",
+									"value": "4960",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "add-project-on-create",
+									"value": "Y",
+									"description": "Title of conversation",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "conversation with _ project ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "3c0f88c5-5d33-4205-ad9f-143a821734f2",
+			"description": "Набор методов для работы со сделками"
+		},
+		{
+			"name": "Clients Scope",
+			"item": [
+				{
+					"name": "list",
+					"id": "6720b212-b115-4cd6-abdd-63ce0790bbec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "clients",
+									"type": "text",
+									"description": "обязательный параметр"
+								},
+								{
+									"key": "method",
+									"value": "list",
+									"type": "text",
+									"description": "обязательный параметр"
+								},
+								{
+									"key": "created_by",
+									"value": "1190",
+									"description": "Фильтр по создателю",
+									"type": "text"
+								},
+								{
+									"key": "order",
+									"value": "id:desc,gender:desc",
+									"description": "Сортировка формат [[поле1:?направление<asc,desc>],[поле1:?направление<asc,desc>]...] - возможные поля для сортировки - любые из возвращаемых",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"id": "ff3d41b0-15f8-4206-867d-c94d7dea974b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "clients",
+									"type": "text",
+									"description": "обязательное"
+								},
+								{
+									"key": "method",
+									"value": "add",
+									"type": "text",
+									"description": "обзяательное"
+								},
+								{
+									"key": "creator",
+									"value": "1370",
+									"type": "text",
+									"description": "ID пользователя ответственного за сделку"
+								},
+								{
+									"key": "data[full_name]",
+									"value": " ",
+									"type": "text",
+									"description": "полное имя"
+								},
+								{
+									"key": "data[phone]",
+									"value": "79251111114",
+									"type": "text",
+									"description": "обязательное"
+								},
+								{
+									"key": "data[email]",
+									"value": "test@mail.ru@32",
+									"description": "необязательное",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "3df0ed33-a8be-4864-96df-6227f657e7f4",
+			"description": "Набор методов для работы с клиентами"
+		},
+		{
+			"name": "Orders Scope",
+			"item": [
+				{
+					"name": "OrderDetail",
+					"id": "f99289db-7cdb-4226-b0c5-2f748351b840",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "scope",
+									"value": "orders",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "details",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "35546",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Entrypoint}}",
+							"host": [
+								"{{Entrypoint}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "5e53b9ea-1d3d-494d-9729-356a8d12831b",
+			"description": "Набор методов для работы с заказами",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "97921693-6da5-48b6-a434-e161b2796718",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a9914c00-04d3-453f-943d-78a8cb8040ff",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Autokitchen",
+			"item": [
+				{
+					"name": "Projects",
+					"item": [
+						{
+							"name": "List",
+							"id": "77c3dd4f-71cf-4788-850d-c46a5e58a05b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "scope",
+											"value": "autokitchen/projects",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "list",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Entrypoint}}",
+									"host": [
+										"{{Entrypoint}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"id": "033783ca-f07b-4aeb-aa6b-e85094f2e9b3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "wp_server_id",
+											"value": "2",
+											"description": "`2` by default ",
+											"type": "text"
+										},
+										{
+											"key": "account_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "autokitchen/projects",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "create",
+											"type": "text"
+										},
+										{
+											"key": "dimensions[length]",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "dimensions[width]",
+											"value": "something",
+											"type": "text"
+										},
+										{
+											"key": "dimensions[height]",
+											"value": "4000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Entrypoint}}",
+									"host": [
+										"{{Entrypoint}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "52f43969-5021-4440-baf7-6e83251f89f7",
+					"description": "Набор методов для управления проектами для проекта \"Автокухни\""
+				}
+			],
+			"id": "91a0698a-304d-40bf-9b27-8c7aefcc60cc",
+			"description": "Подраздел для работы с проектом \"Автокухни\""
+		},
+		{
+			"name": "Authorization",
+			"id": "bd55c52f-d594-474f-b917-1b77af947be9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "API_KEY",
+						"value": "{{API_KEY}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "API_KEY",
+							"value": "{{API_KEY}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Entrypoint}}",
+					"host": [
+						"{{Entrypoint}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{ACCESS_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "94d95207-8110-4ce6-b72d-bd4870e1b5af",
+				"type": "text/javascript",
+				"exec": [
+					"",
+					"const auth = async () => {",
+					"",
+					"    //Данные запроса",
+					"    const entrypoint = pm.collectionVariables.get(\"Entrypoint\");",
+					"    if(!entrypoint) throw new Error(\"`Entrypoint` variable empty\");",
+					"    else console.log('Auth on '+entrypoint);",
+					"",
+					"",
+					"    const API_KEY = pm.collectionVariables.get(\"API_KEY\");",
+					"     if(!API_KEY) throw new Error(\"`API_KEY` variable empty\");",
+					"     else console.log('API_KEY: '+API_KEY);",
+					"",
+					"    ",
+					"    //Опции запроса",
+					"    const authOptions = {",
+					"        url:  entrypoint,",
+					"        method: 'POST',",
+					"        body: {",
+					"            mode: 'urlencoded',",
+					"            urlencoded: [",
+					"                { key: \"API_KEY\", value: API_KEY }",
+					"               ",
+					"            ]",
+					"        }",
+					"    };",
+					"",
+					"",
+					"    //Отсылаем и обрабатываем запрос",
+					"    pm.sendRequest(authOptions, ",
+					"        (err, res) => {",
+					"       // console.log(res.text());",
+					"        if (err === null) {",
+					"            const jsonRes = res.json();",
+					"            console.log(jsonRes);",
+					"            if(jsonRes.ACCESS_TOKEN){",
+					"                console.log('Token success!!!');",
+					"                pm.collectionVariables.set(\"ACCESS_TOKEN\",jsonRes.ACCESS_TOKEN);",
+					"            }else{",
+					"                console.log(jsonRes);",
+					"                throw new Error(\"Сервер не предоставил токен\");",
+					"                ",
+					"            }",
+					"            return true;",
+					"        }",
+					"",
+					"        console.log(res,err);",
+					"        throw new Error(\"Не удалось авторизоваться\");",
+					"    });",
+					"",
+					"};",
+					"",
+					"await auth();",
+					"   "
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "db97fb66-b1db-452e-b793-0a351bcaab7f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "a30c05c7-ea9f-4447-bc42-f8725588b990",
+			"key": "Entrypoint",
+			"value": "https://reg.binaroom.com/rest/",
+			"type": "default"
+		},
+		{
+			"id": "d2ef91ed-dfdb-4f39-bf66-e15a233d8121",
+			"key": "API_KEY",
+			"value": "71208c04-0b70-4248-a7a1-20db70ba2731",
+			"type": "string"
+		},
+		{
+			"id": "1e39fa75-e6d4-45a2-8e47-636c7a0ed692",
+			"key": "ACCESS_TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

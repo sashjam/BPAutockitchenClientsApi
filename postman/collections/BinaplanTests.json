@@ -1,13 +1,13 @@
 {
 	"info": {
 		"_postman_id": "877ccf0b-7c52-4ba3-8103-ac481e81dfd7",
-		"name": "Запросы",
+		"name": "BinaplanTests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "9695358-877ccf0b-7c52-4ba3-8103-ac481e81dfd7"
 	},
 	"item": [
 		{
-			"name": "Отправка данных",
+			"name": "autokitchen user request test",
 			"id": "414cfc51-62d9-4bd2-bee1-0522ec69ed9c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true

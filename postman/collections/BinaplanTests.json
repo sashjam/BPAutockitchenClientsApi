@@ -122,25 +122,25 @@
 	],
 	"variable": [
 		{
-			"id": "bf6d66ec-cb4a-4080-b84b-8ce6803d70cf",
+			"id": "c31454ea-9d0b-4e4b-a963-b31c44b3204f",
 			"key": "Entrypoint",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "c182812c-bff8-4cac-b294-bd8c1c5be751",
+			"id": "f8a85984-6ee3-438d-bda8-54ccb81ba6c4",
 			"key": "username",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "ec2577df-f354-4efd-b1f6-7227bb562a72",
+			"id": "c08b8d3b-dae4-4597-bcfa-8837c3861064",
 			"key": "password",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "aa903719-303d-4953-b6b7-915c99a9a244",
+			"id": "a2bb4189-ee3c-48cf-8608-265f3d98dfad",
 			"key": "token",
 			"value": "",
 			"type": "string"

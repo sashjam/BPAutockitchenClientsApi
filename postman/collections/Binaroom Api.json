@@ -550,6 +550,72 @@
 							"response": []
 						},
 						{
+							"name": "Delete",
+							"id": "15cca822-12a9-4d20-8b6a-4bdc2ff36acc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "scope",
+											"value": "autokitchen/projects",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "list",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Entrypoint}}",
+									"host": [
+										"{{Entrypoint}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"id": "4a0f6ab6-2761-4503-851a-f49cdac99885",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "scope",
+											"value": "autokitchen/projects",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "list",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Entrypoint}}",
+									"host": [
+										"{{Entrypoint}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Create",
 							"id": "033783ca-f07b-4aeb-aa6b-e85094f2e9b3",
 							"protocolProfileBehavior": {
@@ -669,7 +735,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "94d95207-8110-4ce6-b72d-bd4870e1b5af",
+				"id": "d6b15a78-b852-4324-b23a-680f82b85bac",
 				"type": "text/javascript",
 				"exec": [
 					"",
@@ -732,7 +798,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "db97fb66-b1db-452e-b793-0a351bcaab7f",
+				"id": "f1e26639-04fb-482f-8e55-764e26ca554a",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -742,22 +808,21 @@
 	],
 	"variable": [
 		{
-			"id": "a30c05c7-ea9f-4447-bc42-f8725588b990",
+			"id": "e688b66b-861a-4922-a73a-c3045abcbb3b",
 			"key": "Entrypoint",
 			"value": "https://reg.binaroom.com/rest/",
-			"type": "default"
+			"type": "string"
 		},
 		{
-			"id": "d2ef91ed-dfdb-4f39-bf66-e15a233d8121",
+			"id": "8b15a088-5de7-4746-a980-7fa0c7fe2e11",
 			"key": "API_KEY",
 			"value": "71208c04-0b70-4248-a7a1-20db70ba2731",
 			"type": "string"
 		},
 		{
-			"id": "1e39fa75-e6d4-45a2-8e47-636c7a0ed692",
+			"id": "ca9c43ca-5737-4ea6-9869-6031945a561c",
 			"key": "ACCESS_TOKEN",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }

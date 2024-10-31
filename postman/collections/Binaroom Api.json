@@ -583,7 +583,7 @@
 							"response": []
 						},
 						{
-							"name": "Update",
+							"name": "UpdateStatus",
 							"id": "4a0f6ab6-2761-4503-851a-f49cdac99885",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -601,7 +601,17 @@
 										},
 										{
 											"key": "method",
-											"value": "list",
+											"value": "updateStatus",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "building1",
 											"type": "text"
 										}
 									]
@@ -808,19 +818,19 @@
 	],
 	"variable": [
 		{
-			"id": "e688b66b-861a-4922-a73a-c3045abcbb3b",
+			"id": "0b9771ed-a85d-4919-a3d4-c00a6cc75977",
 			"key": "Entrypoint",
 			"value": "https://reg.binaroom.com/rest/",
 			"type": "string"
 		},
 		{
-			"id": "8b15a088-5de7-4746-a980-7fa0c7fe2e11",
+			"id": "3b77d9fd-7879-43a4-9ee5-5a3c5cacc80b",
 			"key": "API_KEY",
 			"value": "71208c04-0b70-4248-a7a1-20db70ba2731",
 			"type": "string"
 		},
 		{
-			"id": "ca9c43ca-5737-4ea6-9869-6031945a561c",
+			"id": "088bf7ab-5da8-4890-b563-ecffbd6fe5e2",
 			"key": "ACCESS_TOKEN",
 			"value": ""
 		}

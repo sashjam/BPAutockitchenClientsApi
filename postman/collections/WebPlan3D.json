@@ -1,0 +1,5434 @@
+{
+	"info": {
+		"_postman_id": "992291a7-8608-42dd-a855-80fdb22f3d7d",
+		"name": "WebPlan3D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "9695358-992291a7-8608-42dd-a855-80fdb22f3d7d"
+	},
+	"item": [
+		{
+			"name": "Каталоги",
+			"item": [
+				{
+					"name": "Свойства",
+					"item": [
+						{
+							"name": "Получить свойства каталога",
+							"id": "ae8e69f7-4be2-4307-a9fb-9b9fbc1be0d0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/properties",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"properties"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить свойство по ID",
+							"id": "dc8b233a-b4b6-4f3c-b4d2-a78cf964c2dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/properties/6",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"properties",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Добавить свойство для каталога",
+							"id": "3189130b-b039-4671-85b9-367e00a6aa2b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"всс\",\r\n    \"data\":\"{\\\"params\\\":[],\\\"variants\\\":[{\\\"id\\\":508096,\\\"name\\\":\\\"Вариант 1\\\",\\\"values\\\":[]}]}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/properties",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"properties"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить свойства по списку ID",
+							"id": "af9f075a-b950-4214-bab3-7d88ed1a98d6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/properties/6+3+2",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"properties",
+										"6+3+2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить свойство по ID",
+							"id": "04346e31-f661-4c44-b8ae-44d7db4d0d9c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/properties/6",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"properties",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Изменить свойство по ID",
+							"id": "5bfe70a9-cb76-4db4-bd9f-6aa4c8cc5c26",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"catalogId\":15,\r\n    \"description\":null,\r\n    \"data\":\"{\\\"params\\\":[],\\\"variants\\\":[{\\\"id\\\":743784,\\\"name\\\":\\\"Вариант 1\\\",\\\"values\\\":[]},{\\\"id\\\":96236,\\\"name\\\":\\\"Вариант\\\",\\\"values\\\":[]}]}\",\r\n    \"id\":2,\r\n    \"name\":\"lk,\",\r\n    \"ownerId\":1,\r\n    \"shared\":null,\r\n    \"createdAt\":\"0001-01-01T00:00:00\",\r\n    \"modifiedAt\":\"0001-01-01T00:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/properties/6",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"properties",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "a58cfc52-d8ea-4207-a643-740f51cb14de"
+				},
+				{
+					"name": "Материалы",
+					"item": [
+						{
+							"name": "Получить список материалов",
+							"id": "ea4c08af-713d-4eaf-9c95-a1337b0d347c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/materials",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"materials"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получение группы материалов",
+							"id": "dc8344e5-97c7-46d8-854a-67cefa74a318",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/materialgroup/0",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"materialgroup",
+										"0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить информацию о материале",
+							"id": "1ab37e2f-fdbe-4e90-8abb-f8eea7a3c44a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/findmaterial/жожло",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"findmaterial",
+										"жожло"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить материал по ID",
+							"id": "78be4ad8-b3f4-4417-a963-e4b6f069c64c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/materials/39",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"materials",
+										"39"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить материал по ID",
+							"id": "e3e4c406-3282-41cd-8145-0cd668a57d22",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/materials/39",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"materials",
+										"39"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Обновить информацию о материале по ID",
+							"id": "dcef9a79-da0e-4674-b538-6e5fbac4c6a5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":39,\r\n    \"type\":0,\r\n    \"catalogId\":15,\r\n    \"name\":\"жожло\",\r\n    \"texture\":null,\r\n    \"bumpTexture\":null,\r\n    \"sizex\":100,\r\n    \"sizey\":100,\r\n    \"offsetx\":0,\r\n    \"offsety\":0,\r\n    \"angle\":0,\r\n    \"transparency\":0,\r\n    \"reflection\":0.39,\r\n    \"ambient\":0,\r\n    \"specular\":0.3,\r\n    \"shininess\":0.4,\r\n    \"sku\":\"\",\r\n    \"sign\":null,\r\n    \"price\":0,\r\n    \"unit\":0,\r\n    \"attributes\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/materials/39",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"materials",
+										"39"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Добавить материал",
+							"id": "cf08b4c9-ae27-4cdc-8f70-c808de25332f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"vfnthbf\",\r\n    \"groupId\":36\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/materials",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"materials"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Загрузить текстуру для материала",
+							"id": "bd79c426-85bc-4914-bde1-13bc33237b1b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Student3/Desktop/s3test.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/17/materials/42/texture",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"17",
+										"materials",
+										"42",
+										"texture"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Загрузить карту нормалей для материала",
+							"id": "3a78b9b6-f366-4a0a-bbd8-86a15a32b362",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Student3/Desktop/s3test.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/17/materials/42/bumptexture?bump=false",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"17",
+										"materials",
+										"42",
+										"bumptexture"
+									],
+									"query": [
+										{
+											"key": "bump",
+											"value": "false",
+											"description": "Если загружается уже готовая карта нормалей, то bump = false, если нужно создать карту нормалей на основе загруженной картинки, то bump = true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить информацию о материалах по ID каталога и имени материала",
+							"id": "65184f6e-f8f1-4881-a7de-cb2cf339a087",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\"17\\nшнывепапыв\", \"17\\ntest\"]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/materials",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"materials"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить материалы модели",
+							"id": "672c9336-3d4c-4a9c-b7e3-e52b21a91a2d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/17/model/105/materials",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"17",
+										"model",
+										"105",
+										"materials"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "011be0c0-007b-4620-b806-205b9432d9d6"
+				},
+				{
+					"name": "Архивы",
+					"item": [
+						{
+							"name": "Архивация каталога",
+							"id": "7ef12d0c-f8dc-4164-b6a0-c71c643adedb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/archive",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"archive"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Список архивов каталога",
+							"id": "e0308513-f1ce-4b81-81f5-a40a860921e0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/archives",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"archives"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Скачать архив",
+							"id": "9873016a-0721-4bc5-8278-2396643cf6a5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/archive/yutyutyu-22faf5f3.zip",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"archive",
+										"yutyutyu-22faf5f3.zip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить архив",
+							"id": "a9a42331-1cd6-4ee3-85c8-d17f2b88708d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/15/archive/yutyutyu-22faf5f3.zip",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"15",
+										"archive",
+										"yutyutyu-22faf5f3.zip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Восстановить из архива",
+							"id": "f4049564-0fa9-4a97-9562-eaa03e22dcae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/catalogs/restorefromarchive?id=15&name=yutyutyu-22faf5f3.zip",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"catalogs",
+										"restorefromarchive"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "15"
+										},
+										{
+											"key": "name",
+											"value": "yutyutyu-22faf5f3.zip"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "e34866b7-9fc8-41a7-9463-66b7e09bed5a"
+				},
+				{
+					"name": "Список всех каталогов",
+					"id": "f0588104-e026-4329-9e45-d598617a6be3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/all",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Список всех каталогов пользователя",
+					"id": "9be3769b-4950-4f2f-9cdc-c49d292e79ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Список каталогов общего доступа",
+					"id": "e65ab6c0-f875-4823-a347-135b3eae5e59",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/shared",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"shared"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить информацию о каталоге",
+					"id": "9edc4cfd-561e-42ef-8b33-ddfda75190dd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/15",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить вложенные каталоги",
+					"id": "fd523b49-4ec8-49b2-9c43-64a5e766fb02",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/4/nested",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"4",
+								"nested"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить каталог",
+					"id": "60960f61-1567-499c-8e9e-03a18a34348c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/14",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изменить информацию о каталоге",
+					"id": "ae0dcbdf-2000-4377-aa77-7dc177116ca3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"yutyutyu\",\r\n    \"description\":\"tyutyu\",\r\n    \"type\":0,\r\n    \"preview\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/15",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Обновить preview каталога",
+					"id": "5dcb7dd3-f6c5-443c-b00c-58c2b7055c2f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Student3/Desktop/s3test.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/15/preview",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"15",
+								"preview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить preview каталога",
+					"id": "a6840cc0-068c-42c7-8352-f764b6bab596",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/15/preview",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"15",
+								"preview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавить каталог",
+					"id": "e1cf5f9d-82be-48b5-b3f4-2861814d6097",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"postMAN\",\r\n    \"description\":\"\",\r\n    \"type\":0,\r\n    \"shared\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/catalogs",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Синхронизация каталога",
+					"id": "af12a364-3f91-4707-9e26-4083383eb2ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"catalogUrl\":\"http://localhost:4200/catalog/17/models\",\r\n    \"token\":\"QsWHw08khN3jWSv0eR9_N6OebuD5RbNPFUpcdNploLY\",\r\n    \"updateExistingModels\":false,\r\n    \"removeMissingModels\":false,\r\n    \"destFolderId\":99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/15/sync",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"15",
+								"sync"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Пакетное редактирование моделей в каталоге",
+					"id": "a9e4d14c-111a-4840-ade3-d51500850e07",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mask\":\"*[oik\",\r\n    \"command\":\"count\",\r\n    \"folder\":99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/15/batch",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"15",
+								"batch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Поиск общего каталога по имени",
+					"id": "27e05423-1840-4b27-9e2e-3e3a3883cbe6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/find/testcat",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"find",
+								"testcat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Обновить индекс каталога",
+					"id": "0d234191-fd44-45f2-8068-97f6f4ab8eca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/15/updateindex",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"15",
+								"updateindex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Поиск по каталогу",
+					"id": "073f0afd-5c30-466a-a847-0ad8ea68e1bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/17/search?mode=undefined&folder=0&folders=undefined&term=test",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"17",
+								"search"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "undefined"
+								},
+								{
+									"key": "folder",
+									"value": "0"
+								},
+								{
+									"key": "folders",
+									"value": "undefined"
+								},
+								{
+									"key": "term",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Поиск по каталогу Copy",
+					"id": "17013e64-c4b9-4880-9108-500cd5c4904b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/catalogs/17/search?mode=undefined&folder=0&folders=undefined&term=test",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"catalogs",
+								"17",
+								"search"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "undefined"
+								},
+								{
+									"key": "folder",
+									"value": "0"
+								},
+								{
+									"key": "folders",
+									"value": "undefined"
+								},
+								{
+									"key": "term",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "2ef9d478-3ba8-44dd-b389-b86f4e056b74"
+		},
+		{
+			"name": "Заказы",
+			"item": [
+				{
+					"name": "Клиенты",
+					"item": [
+						{
+							"name": "Обновить информацию о клиенте",
+							"id": "db318dfa-8fcd-464a-9f95-22ad1f0e33a0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Тестовый пользовательkmkmkm\",\r\n    \"phone\": \"+7 916 123 45 67\",\r\n    \"email\": \"test@bazissoft.ru\",\r\n    \"address\": \"Коломна, Шилова 15Б\"\r\n}"
+								},
+								"url": {
+									"raw": "{{Endpoint}}/order/clients/5",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"order",
+										"clients",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить клиента",
+							"id": "d0420451-edaa-4aa3-a968-52e43bffc014",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{Endpoint}}/order/clients/4",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"order",
+										"clients",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Создать клиента",
+							"id": "28b6411e-6ff7-4ea4-b557-25801328d6a2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Тестовый пользователь\",\r\n    \"phone\": \"+7 916 123 45 67\",\r\n    \"email\": \"test@bazissoft.ru\",\r\n    \"address\": \"Коломна, Шилова 15Б\"\r\n}"
+								},
+								"url": {
+									"raw": "{{Endpoint}}/order/clients",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"order",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить список клиентов",
+							"id": "b4192577-6d59-4043-ba42-04916fc28244",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{Endpoint}}/order/clients",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"order",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "692458c6-fea0-491e-b2d5-979d48c4700a"
+				},
+				{
+					"name": "Получить смету",
+					"id": "3f9f8324-36cc-4611-9bb3-c166a2525a13",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/order/31/estimate",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"order",
+								"31",
+								"estimate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить информацию о файле",
+					"id": "9e2cc251-2dbd-4cc8-84aa-26a0f92cd616",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/order/31/fileandorder",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"order",
+								"31",
+								"fileandorder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить список заказов",
+					"id": "fde38d3f-7e16-47fa-a59d-647c50fbd23f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WpEndpoint}}/api/order?view=&max=50&skip=0&search=&date=&user=0&role=*",
+							"host": [
+								"{{WpEndpoint}}"
+							],
+							"path": [
+								"api",
+								"order"
+							],
+							"query": [
+								{
+									"key": "view",
+									"value": ""
+								},
+								{
+									"key": "max",
+									"value": "50"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "date",
+									"value": ""
+								},
+								{
+									"key": "user",
+									"value": "0"
+								},
+								{
+									"key": "role",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить список магазинов",
+					"id": "e7bad8d0-6c11-4609-8ec8-db3d57e29b76",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/order/shops",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"order",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить заказ по ID",
+					"id": "1eff4088-bbb3-4827-a2a0-c866072d5a50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{WpEndpoint}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WpEndpoint}}/order/31",
+							"host": [
+								"{{WpEndpoint}}"
+							],
+							"path": [
+								"order",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Обновить информацию о заказе",
+					"id": "d035ec75-1c3e-4c6b-a617-20b534c0b696",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":31,\r\n    \"status\":\"\",\r\n    \"client\": {\r\n        \"name\":\"hgj\",\r\n        \"email\":\"ghj\",\r\n        \"phone\":\"ghj\",\r\n        \"address\":\"gj\",\r\n        \"params\":\"{}\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/order/31",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"order",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Выполнить заказ проекта",
+					"id": "8882be74-f53f-43f1-aca1-420ccf3cbb38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/order/31/process",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"order",
+								"31",
+								"process"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить информацию о шаблоне",
+					"id": "5ce04315-c9c8-4d6e-b4a1-866fc4be8eef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/order/108/document/1?priceListId=1",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"order",
+								"108",
+								"document",
+								"1"
+							],
+							"query": [
+								{
+									"key": "priceListId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "a86c830d-bdb4-4b73-b6f4-60fa7e7aa924"
+		},
+		{
+			"name": "Аккаунт",
+			"item": [
+				{
+					"name": "Для администратора",
+					"item": [
+						{
+							"name": "Изменить информацию о пользователе",
+							"id": "83f6e93f-29ce-464b-937a-3b9f4a740ad3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"ertertert\",\r\n    \"parentUserId\":0,\r\n    \"fullname\":\"Test \",\r\n    \"email\":\"ertertetr@mail.ru\",\r\n    \"phone\":null,\r\n    \"address\":null,\r\n    \"externalId\":null,\r\n    \"roles\":[],\r\n    \"newProjectRole\":\"\",\r\n    \"disabled\":false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/account/updateuser",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"updateuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить пользователя (группу пользователей)",
+							"id": "469a1dd6-ca4e-407a-9491-aead8e7c8d13",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"id\":6,\r\n        \"remove\":true\r\n    },\r\n    {\r\n        \"id\":5,\r\n        \"remove\":true\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/account/updateusers",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"updateusers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить список пользователей",
+							"id": "15af87b8-c515-470f-bc23-f2bc6257891c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/account/users",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Добавить роль",
+							"id": "fc444cc2-9a58-4855-8a3e-7cc4e223129a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "test1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Endpoint}}/account/roles",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить роль",
+							"id": "bd281f52-ebdb-4656-ac9b-b9e078576a2e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/account/roles/test1",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"roles",
+										"test1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить информацию о пользователе",
+							"id": "4e825d25-20da-4fc2-9681-efeabc781c33",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/account/user/1",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Изменить пароль пользователя",
+							"id": "c2b3a81c-b1b1-4213-bb37-92b62a1f37c5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":8,\r\n    \"password\":\"tetetete\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/account/updateuser",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"updateuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Разблокировать пользователя",
+							"id": "1e68c844-c981-453e-b325-91330f718df7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/account/user/4/unlock",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"user",
+										"4",
+										"unlock"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить пользователя",
+							"id": "66765bea-bae1-4433-87ef-eb47c053e695",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/account/user/9",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"user",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Войти в аккаунт пользователя",
+							"id": "cbd64fb6-fe7b-44c5-8d40-ed1c92d8d493",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/account/loginas/4",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"account",
+										"loginas",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "2e702bd6-4a1f-4b34-bbc5-d3651f91c442"
+				},
+				{
+					"name": "Авторизация пользователя",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d3a9907f-bc01-48ec-a336-ab3154275afa",
+								"exec": [
+									"var res = pm.response.json();\r",
+									"pm.collectionVariables.set('WpToken', res.access_token);\r",
+									"\r",
+									"console.log('set aith token',res.access_token.substr(0,10)+' ... '+res.access_token.substr(-10))"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "00c4c57c-596e-413c-8576-9307bb2c81e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "WebPlanner",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "{{WpLogin}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{WpPassword}}",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "WebAPI offline_access openid profile roles",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{WpEndpoint}}/connect/token",
+							"host": [
+								"{{WpEndpoint}}"
+							],
+							"path": [
+								"connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Регистрация пользователя",
+					"id": "a1a474c1-18ff-4835-9b6c-73b198090515",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ertsdsdertert\",\r\n    \"password\":\"assdfdfgrgrt\",\r\n    \"email\":\"ertertetr@mail.ru\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/account/register",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изменить информацию о пользователе",
+					"id": "19465cc8-b3a7-4fdf-894a-b20d25e18d92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"test\",\r\n    \"address\":null,\r\n    \"phone\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/account/update",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изменить пароль",
+					"id": "ca33c911-14ec-447d-a1f1-ad1d752b4d03",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"username1234\",\r\n    \"password\":\"username123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/account/changepassword",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"changepassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Установить пароль",
+					"id": "a3c29e59-a056-4646-a543-895079b4a68e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"username123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/account/setpassword",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"setpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить информацию о пользователе",
+					"id": "39a3057e-b523-44b6-8c7a-5623f8130994",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/account/userinfo",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"userinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить список ролей",
+					"id": "3765ccbd-ed69-43fe-91d0-7e8ea9b3b182",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WpEndpoint}}/account/roles",
+							"host": [
+								"{{WpEndpoint}}"
+							],
+							"path": [
+								"account",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Builder статус",
+					"id": "601bc9ec-c9fe-496c-ae72-386c67d6f540",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/account/builder",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"builder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить токен",
+					"id": "9d89e9bf-cf57-4f23-8ec2-91fffde42c16",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/account/token",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Сгенерировать токен",
+					"id": "a03c89ef-2545-4f01-bb61-5cc7711d6935",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/account/token",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить токен",
+					"id": "c35b1cbd-5aa3-47d6-9d51-6ed2dfe061ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/account/token",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"account",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9ea230cc-bfc9-4db7-a67f-98a10e78c809"
+		},
+		{
+			"name": "Файлы",
+			"item": [
+				{
+					"name": "Бэкапы",
+					"item": [
+						{
+							"name": "Восстановить бэкап",
+							"id": "ff6955c4-21c2-4cc7-af83-fc28831aaa47",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/restore/110",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"restore",
+										"110"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Создать бэкап файла",
+							"id": "bf4b8562-1d96-476a-a1ac-5198afa1769a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/backup",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"backup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить бэкапы файла",
+							"id": "eb666b0e-0f26-480b-a61c-72b4fd084287",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/backups",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"backups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить  бэкапы файла Copy",
+							"id": "6b66e95e-6dd8-439d-93c3-c67bfe0139a9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/24765",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"24765"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "68217c4e-684d-4325-9a91-74611cd6d0bd"
+				},
+				{
+					"name": "Архивы",
+					"item": [
+						{
+							"name": "Архивировать файл",
+							"id": "205c9ac4-6ee4-42a0-9654-7ce455749d3e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/archive",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"archive"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Восстановить файл из архива",
+							"id": "489fba64-b7fd-4d61-a2f2-b8b0ad203f40",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/restorefromarchive",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"restorefromarchive"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8391f392-6a05-411d-95d3-8790d2b322ed"
+				},
+				{
+					"name": "Изображения",
+					"item": [
+						{
+							"name": "Получить preview",
+							"id": "768e1069-d010-41c9-85dc-a3c4ff576676",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{Endpoint}}/files/138/preview",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"138",
+										"preview"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Загрузить своё preview для файла",
+							"id": "c1dcc8dd-4623-47de-9147-9aff86be2f91",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Student3/Desktop/s3test.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Endpoint}}/files/138/custompreview",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"138",
+										"custompreview"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить изображения проекта",
+							"id": "83608f1d-ccdc-4365-b159-00c18290c04a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/images",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"images"
+									],
+									"query": [
+										{
+											"key": "url",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Загрузить изображение для проекта",
+							"id": "c2c989b2-0536-4c63-a0cc-de6dad7017a3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Student3/Desktop/s3test.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Endpoint}}/files/31/image",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"image"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "474e8454-3bc1-40fc-a39f-eca5ec6916a5"
+				},
+				{
+					"name": "Информация",
+					"item": [
+						{
+							"name": "Получить информацию о файлах по ID",
+							"id": "1368401e-ca5b-424e-abea-a004f3d7ab74",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/items/12+106",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"items",
+										"12+106"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Проверить права доступа к файлу",
+							"id": "224d9d54-9ddb-45dc-ae95-9c020d56d6e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/access",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"access"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Проверить файл на блокировку",
+							"id": "0960be24-1828-4d01-b9b3-66c22b8dc943",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/locked",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"locked"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить информацию о родителе файла",
+							"id": "4f05517b-0282-4a09-bf14-c907986736fb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/31/parent",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31",
+										"parent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Обновить информацию о файле",
+							"id": "345571ff-d800-4159-ad2e-b945f21bc29b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test\",\r\n    \"price\": 123,\r\n    \"sku\": \"testststst\",\r\n    \"shared\": false,\r\n    \"sharedRole\": \"*\",\r\n    \"locked\": false,\r\n    \"parentId\": 1,\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/files/31",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить информацию о размере модели в байтах",
+							"id": "1e479cab-9cf1-4313-9792-b6594fa8810b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/files/138/size",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"files",
+										"138",
+										"size"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8992f39c-c74c-4b8c-b790-4d89724dc26d"
+				},
+				{
+					"name": "Получить файл по ID",
+					"id": "63662787-604c-482a-9d25-646ac5ddcb4f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/31?children=true",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"31"
+							],
+							"query": [
+								{
+									"key": "children",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить токены файла по ID",
+					"id": "805be195-589b-409c-8fe5-696c61fec119",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/31/tokens",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"31",
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить родительские элементы файла",
+					"id": "711deb2b-352b-4a88-80dd-0740153b951e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/123/parents",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"123",
+								"parents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Выполнить действия над моделями в каталоге",
+					"id": "bb8c726a-e13f-42af-8249-a5192b7deac3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/101/models/get?value=4&arg=1",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"101",
+								"models",
+								"get"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "4"
+								},
+								{
+									"key": "arg",
+									"value": "1"
+								},
+								{
+									"key": null,
+									"value": "",
+									"description": "Mesh size - value = 4, arg = 1;\nModel width - value = 1, arg = 0;\nModel height - value = 1, arg = 1;\nModel depth - value = 1, arg = 2;",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Поиск моделей по имени",
+					"id": "394e5a39-50d8-4a16-82b4-5267834344bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    \"Наименование\"\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/files/findmodelsbyname",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"findmodelsbyname"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить последние файлы",
+					"id": "d9802c38-5c11-4c30-b35b-d81f92b582bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{WpToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WpEndpoint}}/files/recent/10",
+							"host": [
+								"{{WpEndpoint}}"
+							],
+							"path": [
+								"files",
+								"recent",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить структуру файла",
+					"id": "a8e36852-0dc7-4ffd-b234-5721df86510b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/31/structure",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"31",
+								"structure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить значение с модели",
+					"id": "46543834-64ee-4407-8bb1-59fec5bc33f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/31/get?value=4&arg=1",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"31",
+								"get"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "4"
+								},
+								{
+									"key": "arg",
+									"value": "1"
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "Mesh size - value = 4, arg = 1;\nModel width - value = 1, arg = 0;\nModel height - value = 1, arg = 1;\nModel depth - value = 1, arg = 2;",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить элементы в папке каталога",
+					"id": "7a4a0202-bc74-4df8-b353-19cade103592",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/112/items",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"112",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить список шаблонов",
+					"id": "7040c2bc-fa0c-4c9a-a5d7-92908a02a1fe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/templates",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"templates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создать проект",
+					"id": "9762ddd4-675d-46b0-8a5a-89bd1241fa10",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Проект 111111\",\r\n    \"type\":\"Project\",\r\n    \"parentId\":0,\r\n    \"shared\":null,\r\n    \"template\":false,\r\n    \"action\":{\r\n        \"type\":\"apply\",\r\n        \"undo\":\"clear\",\r\n        \"items\":[{\"uid\":\"\",\"children\":[{\"parent\":\"\",\"data\":{\"wall\":{\"id\":1802179002,\"catalog\":-1,\"dir\":1,\"roomIntervals\":[{\"t1\":5050,\"t2\":50}],\"hash\":\"3aa691fb930cbfd27c9716dd270790df\"}},\"matrix\":[1,0,0,0,0,1,0,0,0,0,1,0,-50,0,-50,1],\"builder\":{\"type\":\"profile\",\"material\":{\"name\":\"#FFC78E\",\"catalog\":-1},\"profile\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1802179000,\"x1\":50,\"y1\":-50,\"x2\":-5150,\"y2\":-50},{\"type\":\"Line\",\"id\":1802178999,\"x1\":-5150,\"y1\":-50,\"x2\":-5050,\"y2\":50},{\"type\":\"Line\",\"id\":1802179003,\"x1\":-5050,\"y1\":50,\"x2\":-50,\"y2\":50},{\"type\":\"Line\",\"id\":1802179002,\"x1\":-50,\"y1\":50,\"x2\":50,\"y2\":-50}]},\"path\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1,\"x1\":0,\"y1\":-50,\"x2\":0,\"y2\":2510}]}},\"children\":[{\"uid\":\"\",\"name\":\"68871699|82367978|1769566441|1802179002\",\"type\":\"wp-wall-surface\",\"elastic\":{\"container\":true,\"box\":[0,0,0,5000,2500,0],\"params\":[{\"name\":\"@wp_angle1\",\"size\":90},{\"name\":\"@wp_angle2\",\"size\":90}]},\"matrix\":[1,0,0,0,0,1,0,0,0,0,1,0,50,0,50,1]}],\"elastic\":{\"params\":[{\"name\":\"@wp_thickness\",\"size\":100}]}},{\"parent\":\"\",\"data\":{\"wall\":{\"id\":68871699,\"catalog\":-1,\"dir\":1,\"roomIntervals\":[{\"t1\":4050,\"t2\":50}],\"hash\":\"8cebb6bab161a80474db104d29883a95\"}},\"matrix\":[0,0,1,0,0,1,0,0,-1,0,0,0,5050,0,-50,1],\"builder\":{\"type\":\"profile\",\"material\":{\"name\":\"#FFC78E\",\"catalog\":-1},\"profile\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":68871697,\"x1\":50,\"y1\":-50,\"x2\":-4150,\"y2\":-50},{\"type\":\"Line\",\"id\":68871696,\"x1\":-4150,\"y1\":-50,\"x2\":-4050,\"y2\":50},{\"type\":\"Line\",\"id\":68871700,\"x1\":-4050,\"y1\":50,\"x2\":-50,\"y2\":50},{\"type\":\"Line\",\"id\":68871699,\"x1\":-50,\"y1\":50,\"x2\":50,\"y2\":-50}]},\"path\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1,\"x1\":0,\"y1\":-50,\"x2\":0,\"y2\":2510}]}},\"children\":[{\"uid\":\"\",\"name\":\"68871699|82367978|1769566441|1802179002\",\"type\":\"wp-wall-surface\",\"elastic\":{\"container\":true,\"box\":[0,0,0,4000,2500,0],\"params\":[{\"name\":\"@wp_angle1\",\"size\":90},{\"name\":\"@wp_angle2\",\"size\":90}]},\"matrix\":[1,0,0,0,0,1,0,0,0,0,1,0,50,0,50,1]}],\"elastic\":{\"params\":[{\"name\":\"@wp_thickness\",\"size\":100}]}},{\"parent\":\"\",\"data\":{\"wall\":{\"id\":82367978,\"catalog\":-1,\"dir\":1,\"roomIntervals\":[{\"t1\":5050,\"t2\":50}],\"hash\":\"e2f7f7ea319312416fd8ba7473b56507\"}},\"matrix\":[-1,0,0,0,0,1,0,0,0,0,-1,0,5050,0,4050,1],\"builder\":{\"type\":\"profile\",\"material\":{\"name\":\"#FFC78E\",\"catalog\":-1},\"profile\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":82367976,\"x1\":50,\"y1\":-50,\"x2\":-5150,\"y2\":-50},{\"type\":\"Line\",\"id\":82367975,\"x1\":-5150,\"y1\":-50,\"x2\":-5050,\"y2\":50},{\"type\":\"Line\",\"id\":82367979,\"x1\":-5050,\"y1\":50,\"x2\":-50,\"y2\":50},{\"type\":\"Line\",\"id\":82367978,\"x1\":-50,\"y1\":50,\"x2\":50,\"y2\":-50}]},\"path\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1,\"x1\":0,\"y1\":-50,\"x2\":0,\"y2\":2510}]}},\"children\":[{\"uid\":\"\",\"name\":\"68871699|82367978|1769566441|1802179002\",\"type\":\"wp-wall-surface\",\"elastic\":{\"container\":true,\"box\":[0,0,0,5000,2500,0],\"params\":[{\"name\":\"@wp_angle1\",\"size\":90},{\"name\":\"@wp_angle2\",\"size\":90}]},\"matrix\":[1,0,0,0,0,1,0,0,0,0,1,0,50,0,50,1]}],\"elastic\":{\"params\":[{\"name\":\"@wp_thickness\",\"size\":100}]}},{\"parent\":\"\",\"data\":{\"wall\":{\"id\":1769566441,\"catalog\":-1,\"dir\":1,\"roomIntervals\":[{\"t1\":4050,\"t2\":50}],\"hash\":\"d883101a794d487b8c0194b8c554a2a2\"}},\"matrix\":[0,0,-1,0,0,1,0,0,1,0,0,0,-50,0,4050,1],\"builder\":{\"type\":\"profile\",\"material\":{\"name\":\"#FFC78E\",\"catalog\":-1},\"profile\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1769566439,\"x1\":50,\"y1\":-50,\"x2\":-4150,\"y2\":-50},{\"type\":\"Line\",\"id\":1769566438,\"x1\":-4150,\"y1\":-50,\"x2\":-4050,\"y2\":50},{\"type\":\"Line\",\"id\":1769566442,\"x1\":-4050,\"y1\":50,\"x2\":-50,\"y2\":50},{\"type\":\"Line\",\"id\":1769566441,\"x1\":-50,\"y1\":50,\"x2\":50,\"y2\":-50}]},\"path\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1,\"x1\":0,\"y1\":-50,\"x2\":0,\"y2\":2510}]}},\"children\":[{\"uid\":\"\",\"name\":\"68871699|82367978|1769566441|1802179002\",\"type\":\"wp-wall-surface\",\"elastic\":{\"container\":true,\"box\":[0,0,0,4000,2500,0],\"params\":[{\"name\":\"@wp_angle1\",\"size\":90},{\"name\":\"@wp_angle2\",\"size\":90}]},\"matrix\":[1,0,0,0,0,1,0,0,0,0,1,0,50,0,50,1]}],\"elastic\":{\"params\":[{\"name\":\"@wp_thickness\",\"size\":100}]}},{\"parent\":\"\",\"data\":{\"room\":{\"id\":\"68871699|82367978|1769566441|1802179002\",\"thickness\":50,\"contour\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1802179002,\"x1\":0,\"y1\":0,\"x2\":5000,\"y2\":0},{\"type\":\"Line\",\"id\":68871699,\"x1\":5000,\"y1\":0,\"x2\":5000,\"y2\":4000},{\"type\":\"Line\",\"id\":82367978,\"x1\":5000,\"y1\":4000,\"x2\":0,\"y2\":4000},{\"type\":\"Line\",\"id\":1769566441,\"x1\":0,\"y1\":4000,\"x2\":0,\"y2\":0}]},\"hash\":\"ab16825dac5678a1163507d2a7d2ee96\"}},\"matrix\":[1,0,0,0,0,0,1,0,0,-1,0,0,0,0,0,1],\"builder\":{\"type\":\"panel\",\"material\":{\"name\":\"#935116\",\"thickness\":50,\"catalog\":-1},\"contour\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1802179002,\"x1\":0,\"y1\":0,\"x2\":5000,\"y2\":0},{\"type\":\"Line\",\"id\":68871699,\"x1\":5000,\"y1\":0,\"x2\":5000,\"y2\":4000},{\"type\":\"Line\",\"id\":82367978,\"x1\":5000,\"y1\":4000,\"x2\":0,\"y2\":4000},{\"type\":\"Line\",\"id\":1769566441,\"x1\":0,\"y1\":4000,\"x2\":0,\"y2\":0}]}}},{\"parent\":\"\",\"data\":{\"ceiling\":{\"id\":\"68871699|82367978|1769566441|1802179002\",\"thickness\":10,\"dir\":-1,\"hash\":\"83eafb13bc2d2606169c493118f42f11\"}},\"matrix\":[1,0,0,0,0,0,1,0,0,-1,0,0,0,2510,0,1],\"builder\":{\"type\":\"panel\",\"material\":{\"name\":\"#D7DBDD\",\"thickness\":10,\"catalog\":-1},\"contour\":{\"type\":\"Contour\",\"id\":0,\"elements\":[{\"type\":\"Line\",\"id\":1802179002,\"x1\":0,\"y1\":0,\"x2\":5000,\"y2\":0},{\"type\":\"Line\",\"id\":68871699,\"x1\":5000,\"y1\":0,\"x2\":5000,\"y2\":4000},{\"type\":\"Line\",\"id\":82367978,\"x1\":5000,\"y1\":4000,\"x2\":0,\"y2\":4000},{\"type\":\"Line\",\"id\":1769566441,\"x1\":0,\"y1\":4000,\"x2\":0,\"y2\":0}]}}}],\"data\":{\"floor\":{\"map\":{\"type\":\"Contour\",\"id\":289723004,\"elements\":[{\"type\":\"Line\",\"id\":1802179002,\"x1\":-50,\"y1\":-50,\"x2\":5050,\"y2\":-50},{\"type\":\"Line\",\"id\":68871699,\"x1\":5050,\"y1\":-50,\"x2\":5050,\"y2\":4050},{\"type\":\"Line\",\"id\":82367978,\"x1\":5050,\"y1\":4050,\"x2\":-50,\"y2\":4050},{\"type\":\"Line\",\"id\":1769566441,\"x1\":-50,\"y1\":4050,\"x2\":-50,\"y2\":-50}]},\"aux\":false,\"wallHeight\":2500,\"wallThickness\":100,\"wallMaterial\":\"#FFC78E\",\"wallCatalog\":-1,\"floorMaterial\":\"#935116\",\"floorCatalog\":-1,\"ceilingMaterial\":\"#D7DBDD\",\"ceilingCatalog\":-1}}},{\"uid\":\"root\",\"data\":{\"headLight\":{\"enabled\":true},\"sunLight\":{\"power\":100,\"distance\":1500,\"specular\":0.05,\"shininess\":25,\"enabled\":true,\"shadows\":true,\"position\":{\"0\":0,\"1\":0,\"2\":0},\"direction\":{\"0\":0,\"1\":0,\"2\":0},\"luminance\":40,\"elevation\":60,\"azimuth\":140}}}\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/files",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Переместить файл",
+					"id": "937f5add-5baa-4d69-8200-8c6fe88de747",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"source\":[105],\r\n    \"destination\":116\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/files/move",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"move"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить файл",
+					"id": "100214f9-4657-4621-8292-d5d110849d9d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/116",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"116"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Сжать файл",
+					"id": "3e823713-8379-49e7-bbd8-ad90423bd4e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/117/compress",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"117",
+								"compress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Групповое удаление файлов",
+					"id": "99755aca-9c7f-416d-a967-08ec0566788a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"files\":[129, 130]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/files/delete",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создать папку",
+					"id": "10e75e9d-0570-450e-a67a-175bf645d86c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test14\",\r\n    \"parentId\":122,\r\n    \"type\":\"Folder\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/files",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Скачать проект",
+					"id": "f1d6c0f9-2836-4453-8560-e9837fc250af",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/114/download?format=b3d&material=1",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"114",
+								"download"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "b3d",
+									"description": "Варианты форматов: b3d, c3d, stp, 3ds, dae, glb, fbx"
+								},
+								{
+									"key": "material",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Импортировать файл",
+					"id": "fcb67641-fa2c-4468-8edf-eead87eb6738",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Student3/Documents/Bazis11/Models/шу.b3d"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Endpoint}}/files/100/upload?preview=true",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"100",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "preview",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить ID следующего файла",
+					"id": "06fc7bfc-4a13-408b-a8ae-842b0b74a2bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/files/nextfileid",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files",
+								"nextfileid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создать проект (через project)",
+					"id": "7e3355d3-2564-4095-9c58-cbb45fc3176a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Проект test \",\r\n    \"type\":\"Project\",\r\n    \"parentId\":0,\r\n    \"shared\":null,\r\n    \"template\":false,\r\n    \"project\": {\r\n        \"length\": 6000,\r\n        \"width\": 5000,\r\n        \"height\": 3000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/files",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "96c3dddc-88c5-4b13-a707-4db959872741"
+		},
+		{
+			"name": "Фирма",
+			"item": [
+				{
+					"name": "Получить список прайс-листов",
+					"id": "4f84161a-9092-47a3-bab1-39f15d770d68",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/firm/pricelists?user=0",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"firm",
+								"pricelists"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить прайс-лист по ID",
+					"id": "4201c811-fcb8-4afa-af02-957bfd45b4eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/firm/pricelist/3",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"firm",
+								"pricelist",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить прайс-лист",
+					"id": "a48fb540-9758-4110-9f7b-e3664b37e693",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/firm/pricelist/4",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"firm",
+								"pricelist",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить активный прайс-лист",
+					"id": "3307b20c-e9a9-4b3b-8456-a57f30558db9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Endpoint}}/firm/activepricelist?data=false",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"firm",
+								"activepricelist"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Активировать прайс-лист",
+					"id": "d048e8ea-7d8c-458e-9856-9cc916b43929",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":6,\r\n    \"ownerId\":1,\r\n    \"shared\":\"*\",\r\n    \"name\":\"доршрр\",\r\n    \"modifiedAt\":\"2022-06-09T12:42:28.359074Z\",\r\n    \"externalId\":null,\r\n    \"recordCount\":132\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/firm/activepricelist?userId=1",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"firm",
+								"activepricelist"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "50e97bd4-9382-4362-995e-ea707ff67f90"
+		},
+		{
+			"name": "Система",
+			"item": [
+				{
+					"name": "Для администраторов",
+					"item": [
+						{
+							"name": "Скрипты",
+							"item": [
+								{
+									"name": "Создать скрипт",
+									"id": "be49c1f1-e9d7-45c7-991a-347af880e670",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"source\": \"console.log(\\\"test\\\")\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Endpoint}}/system/script/test",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"script",
+												"test"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Получить скрипт по имени",
+									"id": "6ba40a5b-fa58-44b3-bb05-baea8242f3a2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/script/kjg",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"script",
+												"kjg"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Обновить webstyle",
+									"id": "f391e00e-24d6-4483-9638-cb46a4b0cced",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"style\": \"test\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Endpoint}}/system/webstyle",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"webstyle"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Получить webstyle",
+									"id": "6e46b180-52ed-43c7-97a9-1b2b9dc43956",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/webstyle",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"webstyle"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "12ea69e7-ed6d-45fe-b36b-7d796792f34a"
+						},
+						{
+							"name": "Assets",
+							"item": [
+								{
+									"name": "Получить asset папку по имени",
+									"id": "c6212239-fcac-461c-8779-d39b1d35a69d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/assets",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"assets"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Получить asset из папки по имени",
+									"id": "fad88023-2a56-4cd1-aec0-7e38f0dc3a62",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Удалить asset",
+									"id": "3c8cb6b6-eca3-4480-a5b7-13a639639484",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/asset/scripts/mhf",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"asset",
+												"scripts",
+												"mhf"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Загрузить asset",
+									"id": "dd5e8c25-3454-4b50-9ceb-477f0e074ea5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/Student3/Desktop/test.html"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{Endpoint}}/system/asset/test.html",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"asset",
+												"test.html"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "9922a4d5-1bf0-4d4d-b7c9-4e1dd768bfac"
+						},
+						{
+							"name": "Настройки системы",
+							"item": [
+								{
+									"name": "Получить настройки системы по имени",
+									"id": "570b4e0c-d13f-478d-9ce0-af03b51d0f17",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/appsetting/EmbeddedSettings",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"appsetting",
+												"EmbeddedSettings"
+											],
+											"query": [
+												{
+													"key": null,
+													"value": "",
+													"description": "MailSettings, PlannerSettings, EmbeddedSettings, OrderSettings",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Обновить настройки email",
+									"id": "660c3b50-410f-478c-b7e7-798bfdf730dd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"MailSettings\",\r\n    \"userId\":0,\r\n    \"value\":\"{\\\"port\\\":465,\\\"ssl\\\":true,\\\"disableSslCheck\\\":false,\\\"host\\\":null,\\\"userName\\\":null,\\\"password\\\":null,\\\"senderEmail\\\":null,\\\"adminName\\\":null,\\\"adminEmail\\\":null}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Endpoint}}/system/appsetting",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"appsetting"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Обновить настройки планировщика",
+									"id": "5f0525e6-21ef-4a67-bf96-9b43d91a131b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"PlannerSettings\",\r\n    \"userId\":0,\r\n    \"value\":\"{\\\"showPrices\\\":true,\\\"sounds\\\":true,\\\"doorAnimation\\\":true,\\\"showFloors\\\":true,\\\"replaceByType\\\":true,\\\"navigatorCube\\\":true,\\\"updateChangedModels\\\":true,\\\"defaultRenderMode\\\":1,\\\"defaultCameraMode\\\":1,\\\"defaultFovAngle\\\":60,\\\"shortLinks\\\":false,\\\"allowExport\\\":true}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Endpoint}}/system/appsetting",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"appsetting"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Обновить настройки управления заказами",
+									"id": "6c707bd5-f4c9-4a1e-8544-25e9d51a5bf9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"OrderSettings\",\r\n    \"userId\":0,\r\n    \"value\":\"{\\\"enabled\\\":false,\\\"order\\\":false,\\\"lock\\\":false,\\\"verifyPhone\\\":false,\\\"requirePhone\\\":false,\\\"projectName\\\":null,\\\"email\\\":null,\\\"customParams\\\":[],\\\"customClientParams\\\":[]}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Endpoint}}/system/appsetting",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"appsetting"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "bdb0eaf9-3f28-4ea5-88e7-bb2e30cd2cd3"
+						},
+						{
+							"name": "Отчеты",
+							"item": [
+								{
+									"name": "Получить список отчетов",
+									"id": "6200cbce-ba58-40a2-8530-a7417c19bf90",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/reports",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"reports"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Получить отчет по ID",
+									"id": "9332fd49-1212-40a6-9d5f-107ba60cdd0f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/report/1",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"report",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Удалить отчет",
+									"id": "2c32f376-4c9c-4a55-8f4a-b5abcc54beb9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{Endpoint}}/system/report/1",
+											"host": [
+												"{{Endpoint}}"
+											],
+											"path": [
+												"system",
+												"report",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "584c8f68-8717-4c31-b99f-066596fcade5"
+						},
+						{
+							"name": "Очистить",
+							"id": "18e0e4e2-de6d-44fb-90b6-3c2cc504ddb4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/cleanup",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"cleanup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить конфигурацию по имени",
+							"id": "77b5d3d5-f62d-43e4-acc9-a76d34138685",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/config/archive",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"config",
+										"archive"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"description": "archive, smsserver",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Обновить конфигурацию системы",
+							"id": "45adf069-5d99-4d94-8066-9ef6a20317ff",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"applicationName\": \"WebPlanner\",\r\n    \"registrationEnabled\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/system/config/application",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"config",
+										"application"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Обновить конфигурацию архивации",
+							"id": "5d97f180-5580-4582-b480-11776e24dad1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"destination\": \"D:\\\\Garbage_collector\\\\from planer\",\r\n    \"archiveAfter\": 30,\r\n    \"removeAfter\": 365,\r\n    \"everydayBackup\": false,\r\n    \"saveOnS3\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/system/config/archive",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"config",
+										"archive"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Обновить конфигурацию sms",
+							"id": "8a1d3eba-da1b-4eab-a564-b7427b1d7bc0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"server\": null,\r\n    \"bodyTemplate\": null,\r\n    \"bodyType\": null,\r\n    \"phoneRewriteRules\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Endpoint}}/system/config/smsserver",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"config",
+										"smsserver"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Архивировать все бэкапы",
+							"id": "5a7129cb-7c6e-4acc-8766-482291b526f2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/archivebackups",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"archivebackups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить журнал событий",
+							"id": "ffa1bf5f-0c4b-46cf-95e8-802e04d5b6df",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/journal?days=1&type=undefined ",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"journal"
+									],
+									"query": [
+										{
+											"key": "days",
+											"value": "1",
+											"description": "1, 7, 30"
+										},
+										{
+											"key": "type",
+											"value": "undefined ",
+											"description": "undefined или error"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Удалить журнал событий",
+							"id": "e568d715-3ab5-4cb4-aa1d-08ebac328a78",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/journal",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"journal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Создать бэкап для всех задач",
+							"id": "db060498-94f4-44b4-9006-69bed681856a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/backuptask",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"backuptask"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Статус builder",
+							"id": "210205bb-88e7-4fe1-a433-9cd575d80a9a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/builder",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"builder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Получить конфигурацию системы",
+							"id": "b4bb5ae8-d867-418c-9b94-ffdd87e2263e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Endpoint}}/system/config/application",
+									"host": [
+										"{{Endpoint}}"
+									],
+									"path": [
+										"system",
+										"config",
+										"application"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "script",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "72a64add-d825-4b0c-afab-c6482c224b5f"
+				}
+			],
+			"id": "c6dd7b56-8c21-49b2-baed-8970dca3a58d"
+		},
+		{
+			"name": "Проекты",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "208ab326-6950-42e8-8986-034c21b88c5d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WpEndpoint}}/files/",
+							"host": [
+								"{{WpEndpoint}}"
+							],
+							"path": [
+								"files",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "4878f794-e436-44a8-ad62-69cf5d021c8e",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{wpToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9ed0b6c7-899a-4af6-a579-29ac2353eeea",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6c2bd87b-b753-40e1-83a7-4456e18ba5e5",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{WpToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "79a4539e-1234-4db4-8ce8-168a0ad9d3ad",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"\r",
+					"const auth = async () => {\r",
+					"\r",
+					"    //Данные запроса\r",
+					"    const entrypoint = pm.collectionVariables.get(\"WpEndpoint\");\r",
+					"    if(!entrypoint) throw new Error(\"`WpEndpoint` variable empty\");\r",
+					"    else console.log('Auth on '+entrypoint);\r",
+					"\r",
+					"\r",
+					"    const login = pm.collectionVariables.get(\"WpLogin\");\r",
+					"     if(!login) throw new Error(\"`WpLogin` variable empty\");\r",
+					"     else console.log('login: '+login);\r",
+					"\r",
+					"    const password = pm.collectionVariables.get(\"WpPassword\");\r",
+					"     if(!password) throw new Error(\"`WpPassword` variable empty\");\r",
+					"     else console.log('password: '+password);\r",
+					"\r",
+					"    \r",
+					"    //Опции запроса\r",
+					"    const authOptions = {\r",
+					"        url:  entrypoint+'/connect/token',\r",
+					"        method: 'POST',\r",
+					"        body: {\r",
+					"            mode: 'urlencoded',\r",
+					"            urlencoded: [\r",
+					"                {key:'client_id',value:'WebPlanner'},\r",
+					"                {key:'scope',value:'WebAPI offline_access openid profile roles'},            \r",
+					"                {key:'grant_type',value:'password'},\r",
+					"                {key:'username',value:login},\r",
+					"                {key:'password',value:password}\r",
+					"            ]\r",
+					"        }\r",
+					"    };\r",
+					"\r",
+					"\r",
+					"    //Отсылаем и обрабатываем запрос\r",
+					"    pm.sendRequest(authOptions, \r",
+					"        (err, res) => {\r",
+					"       // console.log(res.text());\r",
+					"        if (err === null) {\r",
+					"            const jsonRes = res.json();\r",
+					"            console.log(jsonRes);\r",
+					"            if(jsonRes.access_token){\r",
+					"                console.log('Token success!!!');\r",
+					"                pm.collectionVariables.set(\"WpToken\",jsonRes.access_token);\r",
+					"            }else{\r",
+					"                console.log(jsonRes);\r",
+					"                throw new Error(\"Сервер не предоставил токен\");\r",
+					"                \r",
+					"            }\r",
+					"            return true;\r",
+					"        }\r",
+					"\r",
+					"        console.log(res,err);\r",
+					"        throw new Error(\"Не удалось авторизоваться\");\r",
+					"    });\r",
+					"\r",
+					"};\r",
+					"\r",
+					"await auth();\r",
+					"   "
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7ed1737e-1ab7-4681-b25b-945602929e11",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "1dc51089-1d9e-4909-a63c-07ce46081645",
+			"key": "WpEndpoint",
+			"value": "https://wp3d.af-softlab.com",
+			"type": "string"
+		},
+		{
+			"id": "628388d8-0805-4ea3-8131-979577c95953",
+			"key": "WpLogin",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "4f7e7ff1-81e7-44d7-99ca-66e3f28450ac",
+			"key": "WpPassword",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "2dead8de-fb52-4049-b7d5-e39de2baa59f",
+			"key": "WpToken",
+			"value": ""
+		}
+	]
+}

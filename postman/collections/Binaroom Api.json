@@ -568,15 +568,26 @@
 										},
 										{
 											"key": "method",
-											"value": "list",
+											"value": "updateStatus",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "1",
 											"type": "text"
 										}
 									]
 								},
 								"url": {
-									"raw": "{{Entrypoint}}",
+									"raw": "{{Entrypoint}}?status=deleted",
 									"host": [
 										"{{Entrypoint}}"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "deleted"
+										}
 									]
 								}
 							},
@@ -818,19 +829,19 @@
 	],
 	"variable": [
 		{
-			"id": "0b9771ed-a85d-4919-a3d4-c00a6cc75977",
+			"id": "f4817d5b-0b99-4de7-8110-b8a57f49c3e9",
 			"key": "Entrypoint",
 			"value": "https://reg.binaroom.com/rest/",
 			"type": "string"
 		},
 		{
-			"id": "3b77d9fd-7879-43a4-9ee5-5a3c5cacc80b",
+			"id": "ebe7518f-ba97-4a4c-ba59-de6135919af8",
 			"key": "API_KEY",
 			"value": "71208c04-0b70-4248-a7a1-20db70ba2731",
 			"type": "string"
 		},
 		{
-			"id": "088bf7ab-5da8-4890-b563-ecffbd6fe5e2",
+			"id": "123e5733-b461-4de8-932b-e4154b26417e",
 			"key": "ACCESS_TOKEN",
 			"value": ""
 		}

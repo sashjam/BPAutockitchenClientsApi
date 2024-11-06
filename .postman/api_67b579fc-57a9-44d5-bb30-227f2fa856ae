@@ -11,6 +11,7 @@ id = 67b579fc-57a9-44d5-bb30-227f2fa856ae
 rootDirectory = postman/collections
 files[] = {"id":"9695358-877ccf0b-7c52-4ba3-8103-ac481e81dfd7","path":"BinaplanTests.json","metaData":{}}
 files[] = {"id":"9695358-8407a556-e72a-48d5-b229-ecf9f5968584","path":"Binaroom Api.json","metaData":{}}
+files[] = {"id":"9695358-992291a7-8608-42dd-a855-80fdb22f3d7d","path":"WebPlan3D.json","metaData":{}}
 
 [config.relations.collections.metaData]
 

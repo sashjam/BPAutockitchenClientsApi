@@ -694,6 +694,21 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Estimate",
+							"id": "93294a91-c659-4d0a-9ad1-c1eb4150c22f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "52f43969-5021-4440-baf7-6e83251f89f7",
@@ -979,19 +994,19 @@
 	],
 	"variable": [
 		{
-			"id": "774b0cfb-09d5-4a07-a50c-afb974da7727",
+			"id": "fd554020-9cb2-4a27-bdd6-9f82a6022118",
 			"key": "Entrypoint",
 			"value": "https://reg.binaroom.com/rest/",
 			"type": "string"
 		},
 		{
-			"id": "89dea131-d3b5-4e3b-98a7-59f0cdacf18c",
+			"id": "411e6e61-96ab-4434-9cca-54cba6f33c84",
 			"key": "API_KEY",
 			"value": "71208c04-0b70-4248-a7a1-20db70ba2731",
 			"type": "string"
 		},
 		{
-			"id": "5be6a534-8c70-4aaa-a8a4-b0ac4a4f8d1d",
+			"id": "72ec6c77-3134-4918-8c75-82ecb936c481",
 			"key": "ACCESS_TOKEN",
 			"value": ""
 		}

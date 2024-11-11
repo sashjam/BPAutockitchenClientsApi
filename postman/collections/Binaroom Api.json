@@ -704,6 +704,156 @@
 			"description": "Подраздел для работы с проектом \"Автокухни\""
 		},
 		{
+			"name": "AnauthorizedRequests",
+			"item": [
+				{
+					"name": "Arch",
+					"item": [
+						{
+							"name": "getTasks",
+							"id": "36b24670-f90e-492d-a3ce-40af2ff05ce7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "till",
+											"value": "2024-06-01",
+											"type": "text"
+										},
+										{
+											"key": "settask",
+											"value": "Y",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sizeLimit",
+											"value": "195000000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.binaroom.com/api/arch/arch.php",
+									"protocol": "https",
+									"host": [
+										"api",
+										"binaroom",
+										"com"
+									],
+									"path": [
+										"api",
+										"arch",
+										"arch.php"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DottedArch",
+							"id": "73aba971-83a2-4463-9e79-4117c982b811",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "server_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.binaroom.com/api/arch/tasks/arch.php",
+									"protocol": "https",
+									"host": [
+										"api",
+										"binaroom",
+										"com"
+									],
+									"path": [
+										"api",
+										"arch",
+										"tasks",
+										"arch.php"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "ad0e2bf5-5d4b-4677-b44c-93351c0c2d3a",
+					"auth": {
+						"type": "noauth"
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2e0ee40f-9999-44e9-8c74-a914bd7271bf",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "41b8c09c-90c2-427d-9d0a-8fb18b4a0afe",
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"id": "e39add17-f8a3-4e1f-80fb-54fa0bdc1de3",
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9e4b46d2-3748-4fa9-94b4-ae4a384e2472",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "79a00ee2-cc48-4af7-8ad8-b2b25651e36c",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
 			"name": "Authorization",
 			"id": "bd55c52f-d594-474f-b917-1b77af947be9",
 			"protocolProfileBehavior": {
@@ -829,19 +979,19 @@
 	],
 	"variable": [
 		{
-			"id": "f4817d5b-0b99-4de7-8110-b8a57f49c3e9",
+			"id": "774b0cfb-09d5-4a07-a50c-afb974da7727",
 			"key": "Entrypoint",
 			"value": "https://reg.binaroom.com/rest/",
 			"type": "string"
 		},
 		{
-			"id": "ebe7518f-ba97-4a4c-ba59-de6135919af8",
+			"id": "89dea131-d3b5-4e3b-98a7-59f0cdacf18c",
 			"key": "API_KEY",
 			"value": "71208c04-0b70-4248-a7a1-20db70ba2731",
 			"type": "string"
 		},
 		{
-			"id": "123e5733-b461-4de8-932b-e4154b26417e",
+			"id": "5be6a534-8c70-4aaa-a8a4-b0ac4a4f8d1d",
 			"key": "ACCESS_TOKEN",
 			"value": ""
 		}
